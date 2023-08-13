@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Include Material Icons CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+        <!-- Include Bootstrap Icons CSS -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Social Media Dashboard</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <nav class="sidebar" id="sidebar">
+                <!-- Sidebar content goes here -->
+                <div class="sidebar-title">
+                    <div class="sidebar-brand">
+                        <span class="material-icons-outlined">public</span>&nbsp; LOGO
+                    </div>
+
+                    <!-- <div class="menu-control">
+                        <span class="material-icons-outlined menu-icon" id="sidebar-toggle" onclick="toggleSidebar()">menu</span>
+                    </div> -->
+                    <div class="close-control">
+                        <span class="material-icons-outlined close-icon" onclick="closeSidebar()">close</span>
+                    </div>
+                </div>
+
+                <ul class="sidebar-list"  >
+                    <li class="sidebar-list-item">
+                        <a href="#">
+                            <span class="material-icons-outlined">dashboard</span> Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#">
+                            <span class="material-icons-outlined">leaderboard</span> Leaderboard
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#">
+                            <span class="material-icons-outlined">forum</span> Forum
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#">
+                            <span class="material-icons-outlined">phone</span> Support
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#">
+                            <span class="material-icons-outlined">email</span> Messages
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#">
+                            <span class="material-icons-outlined">poll</span> Reports
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a href="#">
+                            <span class="material-icons-outlined">settings</span> Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="main-container">
+                <header class="header">
+                    <div class="header-left">
+                        <div class="menu-control">
+                            <span class="material-icons-outlined menu-icon" id="sidebar-toggle" onclick="toggleSidebar()">menu</span>
+                        </div>
+                        <label class="label-head" for="d_search">Search </label>
+                        <input class="search-input" type="search" id="d_search" name="d_search">
+                        <!-- <span class="material-icons-outlined">search</span> -->
+                    </div>
+                    
+                    <div class="header-right">
+                        <a href="#" class="head-href"><span class="material-icons-outlined">notifications</span></a>
+                        <a href="#" class="head-href"><span class="material-icons-outlined">email</span></a>
+                        <a href="#" class="head-href"><span class="material-icons-outlined">account_circle</span></a>                    
+                    </div>
+                </header>
+
+                <h1 class="main-head">DASHBOARD</h1>
+
+                <div class="main-columns">
+                    <!-- First row -->
+                    <div class="column ">
+                        <!-- First column content goes here -->
+                        <div class="dashboard-item item-red">
+                            <span class="material-icons-outlined">thumb_up</span>
+                            <p>LIKES</p>
+                            <p class="value">1234</p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <!-- Second column content goes here -->
+                        <div class="dashboard-item item-orange">
+                            <span class="material-icons-outlined">subscriptions</span>
+                            <p>SUBSCRIBERS</p>
+                            <p class="value">5678</p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <!-- Third column content goes here -->
+                        <div class="dashboard-item item-yellow">
+                            <span class="material-icons-outlined">people</span>
+                            <p>FOLLOWERS</p>
+                            <p class="value">9876</p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <!-- Fourth column content goes here -->
+                        <div class="dashboard-item item-green">
+                            <span class="material-icons-outlined">message</span>
+                            <p>MESSAGES</p>
+                            <p class="value">4321</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Second row -->
+                    <div class="column large-column">
+                        <!-- Content for the larger column goes here -->
+                        <div class="updates">
+                            <h2 class="update-head" >Latest Updates</h2>
+                            <p class="col-content" >Check out the new features! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, vero.</p>
+                            <a href="#" class="plus-icon">+</a>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <!-- Content for the second column goes here -->
+                        <div class="social-icon v2">
+                            <i class="bi bi-facebook icon-f"></i>
+                            <p class="value v-red">+234</p>
+                            <p class="col-text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sapiente.</p>                            
+
+                            <i class="bi bi-twitter icon-t"></i>
+                            <p class="value v-orange">+127</p>
+                            <p class="col-text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sapiente.</p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <!-- Content for the third column goes here -->
+                        <div class="social-icon v2">
+                            <i class="bi bi-linkedin icon-l"></i>
+                            <p class="value v-yellow">+559</p>
+                            <p class="col-text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sapiente.</p>
+
+                            <i class="bi bi-instagram icon-i"></i>
+                            <p class="value v-green">+559</p>
+                            <p class="col-text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, sapiente.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="JS/scripts.js"></script>
+    </body>
+
+</html>

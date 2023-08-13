@@ -1,0 +1,393 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+}
+
+/* Basic styling for the wrapper and main layout */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    /* Hide vertical scrollbar */
+}
+
+.sidebar {
+    width: 170px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 5px;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    /* Add more styles as needed */
+}
+
+/* Add the following styles for the sidebar */
+.sidebar-title {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.sidebar-title > span {
+    display: none;
+}
+
+.sidebar-brand {
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.sidebar-list {
+    /* display: block; */
+    padding: 0;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.sidebar-list-item {
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.sidebar-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.sidebar-list-item a {
+    text-decoration: none;
+    color: rgba(180, 184, 244);
+}
+
+.menu-icon {
+    display: none;
+}
+
+.close-icon {
+    display: none;
+}
+
+/* ------Main container------- */
+
+.main-container {
+    flex: 1;
+    overflow: hidden;
+    /* Hide horizontal scrollbar */
+}
+
+.header {
+    background-color: #e3e0e0;
+    color: #fff;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left h1 {
+    margin-left: 10px;
+}
+
+.header-right {
+    display: flex;
+    gap: 15px;
+    /* Add spacing between icons */
+}
+
+.header-right .material-icons-outlined {
+    font-size: 24px;
+    color: black;
+}
+
+
+
+.label-head {
+    color: black;
+}
+
+/* ... (other styles) */
+
+.main-head {
+    margin: 10px 20px;
+    font-size: 20px;
+}
+
+.main-columns {
+    /* background-color: gray; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 10px;
+    justify-content: center; /* Center the columns horizontally */
+    align-items: flex-start; /* Align items to the top */
+    /* Add more styles as needed */
+}
+
+.column {
+    /* background-color: purple; */
+    flex: 1;
+    min-width: 165px;
+    padding: 5px;
+    /* Add more styles as needed */
+}
+
+.dash {
+    /* height: 100px; */
+}
+/* Responsive styles */
+@media (max-width: 913px) {
+    .wrapper {
+        /* flex-direction: column; */
+    }
+
+    .main-container {
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    .sidebar {
+        /* max-width: 100px; */
+        /* padding-bottom: 20px; */
+        width: 0;
+        padding: 0;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+
+    .sidebar.active {
+        width: 140px;
+        overflow-y: auto;
+    }
+
+    .sidebar-list {
+        display: none;
+    }
+
+    .header.active {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline-block !important;
+        color: black;
+    }
+
+    .close-icon {
+        display: inline-block;
+        color: white;
+    }
+
+    .menu-control, .close-control {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-control .menu-icon {
+        /* margin-right: 30px; */
+    }
+
+    .sidebar-title {
+        justify-content: space-between;
+    }
+
+    .label-head {
+        display: none;
+    }
+
+    .search-input {
+        width: 60px;
+    }
+}
+
+
+/* ... (previous styles) */
+
+/* Additional styles for the dashboard items */
+.dashboard-item {
+    /* background-color: #fff; */
+    border-radius: 5px;
+    padding: 5px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dashboard-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.item-red {
+    background-color: red;
+}
+
+.item-orange {
+    background-color: orange;
+}
+
+.item-yellow {
+    background-color: yellow;
+}
+
+.item-green {
+    background-color: green;
+}
+
+.value {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+/* Additional styles for the second row */
+.large-column {
+    flex: 3;
+    
+}
+
+
+/* Additional styles for the second row content */
+.updates {
+    height: 190px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.update-head {
+    font-size: 19px;
+}
+
+.col-content {
+    font-size: 15px;
+}
+
+.plus-icon {
+    margin-top: 1rem;
+    display: inline-block;
+    background: linear-gradient(to bottom right, red, orange, yellow, green);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.plus-icon:hover {
+        background: linear-gradient(to bottom left, green, yellow, orange, red);
+}
+
+.v-red {
+    color: red;
+}
+
+.v-orange {
+    color: orange;
+}
+
+.v-yellow {
+    color: yellow;
+}
+
+.v-green {
+    color: green;
+}
+
+/* Additional styles for the social icons */
+.social-icon {
+    font-size: 18px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.social-icon .material-icons-outlined {
+    font-size: 30px;
+    /* margin-bottom: 5px; */
+}
+
+.col-text1, .col-text2 {
+    font-size: 12px;
+}
+
+.col-text1 {
+    margin-bottom: 7px;
+}
+
+.icon-f {
+    color: #5b7dc1;
+}
+
+.icon-t {
+    color: skyblue;
+}
+
+.icon-l {
+    color: #5b7dc1;
+}
+
+.icon-i {
+    border-radius: 4px;
+    background: linear-gradient(135deg, #833AB4, #FD1D1D);
+    /* background: linear-gradient(to bottom right, #4c68d7, #8a3ab9, #bc2a8d, #fccc63); */
+}
+
+/* Medium <= 992px */
+/* @media screen and (max-width: 992px) {
+    .wrapper {
+        
+    }
+} */
+
+/* Small <= 768px */
+/* @media screen and (max-width: 768px) {} */
+
+/* Extra Small <= 567px */
+/* @media screen and (max-width: 567px) {}  */
+
+
+/* 
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        padding: 0;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+
+    .sidebar.active {
+        width: 250px;
+        overflow-y: auto;
+    }
+
+    .main-container {
+        flex: 1;
+    }
+
+    .menu-icon {
+        display: block !important;
+        background-color: blue;
+        width: 50px;
+    }
+} */
